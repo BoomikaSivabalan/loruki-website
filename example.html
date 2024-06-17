@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grid Layout Example</title>
+  <style>
+    .cli .grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+       /* Create 4 equal-width columns */
+      gap: 10px; /* Space between grid items */
+    }
+
+    .cli .grid > h3 {
+      grid-column: 1 / span 2; /* Start at column 1 and span 2 columns */
+      grid-row: 1 / span 2;/* Start at row 1 and span 2 rows */
+      background-color: lightblue; /* Background color for visualization */
+      padding: 20px;
+      text-align: center;
+    }
+
+    .cli .grid > .card {
+      background-color: lightcoral; /* Background color for visualization */
+      padding: 20px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <section class="cli">
+    <div class="container grid">
+      <h3>c1</h3>
+      <div class="card">
+        <h3>c2</h3>
+      </div>
+      <div class="card">
+        <h3>c3</h3>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
